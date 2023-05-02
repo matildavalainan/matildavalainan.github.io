@@ -1,0 +1,257 @@
+:root {
+    /* --變數名: 值; */
+    --nav-active-color: #F2E5E5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif TC', serif;
+
+    margin: 0px;
+}
+
+nav {
+    width: 100%;
+    height: 131px;
+    background: #2B3A55;
+    display: flex;
+    align-items: right;
+    padding-left: 40px;
+
+}
+
+nav img {
+    margin-top: 40px;
+    height: 100px;
+}
+
+nav a {
+    color: #F2E5E5;
+    display: inline-block;
+    text-decoration: none;
+    padding-top: 35px;
+    padding-left: 12px;
+    padding-right: 12px;
+    min-width: 85px;
+    height: 63px;
+}
+
+nav .navbar-list {
+    font-weight: 700;
+}
+
+nav .active-link {
+    color: var(--nav-active-color);
+
+}
+
+header {
+    background: #2B3A55;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-context {
+    width: 100%;
+    /* background: orange; */
+    padding: 30px 40px;
+}
+
+.header-carousel {
+    width: 0%;
+}
+
+.header-context h1 {
+
+    color: #ffffff;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700;
+}
+
+.header-context h2 {
+    font-family: 'Noto serif TC', serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+}
+
+blockquote {
+    color: #eceae3c6;
+    font-size: 16px;
+
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 600;
+    line-height: 2;
+    border-left: 5px solid #ccc;
+    border-right: 5px solid #ccc;
+    margin: 30px 30px;
+    text-align: center;
+    border-width: 3px;
+}
+
+blockquote h2 {
+    font-weight: 900;
+    color: #ffffff;
+}
+
+
+.navbar-btn {
+    display: none;
+}
+
+article {
+    padding: 50px 50px;
+    background: #ceccc2;
+
+}
+
+
+
+article h1 {
+    font-size: 28px;
+    margin: 100px 100px;
+    text-align: center;
+    font-weight: 900;
+
+}
+
+.container {
+    column-width: 150%;
+}
+
+.container img {
+    width: 90%;
+    background-color: transparent;
+
+}
+
+article p {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    line-height: 2em;
+}
+
+article h6 {
+    margin: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 2em;
+}
+
+article h5 {
+    margin: 40px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 2em;
+}
+
+footer {
+    background-color: #2B3A55;
+    /* 底部背景色 */
+    color: #ffffff;
+    /* 文字顏色 */
+    padding: 80px 0;
+    /* 上下padding */
+    text-align: center;
+    /* 文字置中對齊 */
+
+}
+
+.container-f {
+    max-width: 960px;
+    /* 最大寬度 */
+    margin: 0 auto;
+    /* 水平置中 */
+    font-weight: 900;
+    font-size: 16px;
+
+}
+
+
+
+
+
+
+/* media query */
+@media (max-width: 1070px) {
+    nav {
+        height: 70px;
+        justify-content: space-between;
+        padding-left: 15px;
+        padding-right: 15px;
+
+    }
+
+    .navbar-btn {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+    }
+
+    .navbar-btn:hover {
+        opacity: .5;
+    }
+
+    .line {
+        width: 24px;
+        height: 2px;
+        background: #ccc;
+        margin: 5px 0px;
+    }
+
+    .navbar-list {
+        position: fixed;
+        top: 0px;
+        left: -300px;
+        background: #b3b3b3d3;
+        width: 300px;
+        height: 100vh;
+        z-index: 999;
+        transition: all .3s ease;
+        padding-left: 15px;
+    }
+
+    .navbar-list a {
+        left: 0px;
+        display: block;
+        color: #ffffff;
+        padding-left: 15px;
+
+    }
+
+    .navbar-list.active {
+        left: 0px;
+        padding-left: 15px;
+    }
+
+
+
+
+
+    /* 視窗寬度 <= 1070px 以下的樣式才會起作用 */
+    .header-context,
+    .header-carousel {
+        width: 100%;
+    }
+
+    .header-context {
+        padding: 100px 60px;
+    }
+
+    .row-cols-2>* {
+        width: 100%;
+        max-width: 100%;
+    }
+}
